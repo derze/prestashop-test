@@ -49,14 +49,7 @@ export default {
       }
   },
   methods: {
-    changeMsg: function(){
-     this.$parent.title = this.titre;
-     
-   },
-   openModel: function(article){
-     this.$emit('showit',article)
-     
-   }
+    
    
       
    }
