@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Open+Sans:300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:600,700&display=swap');
+
+* {
+    outline: 0;
+    }
+$radius: 3px;
+$grey-clear:#FCFCFC;
+$grey-medium:#D2D2D2;
+$blue-dark: #011638;
+
+%h1{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: $blue-dark;
+}
+
+a{  
+    font-style: inherit;
+    color: #7A7A7A;
+    background-color: transparent;
+    font-size: inherit;
+    text-decoration: none;
+    font-variant: inherit;
+    font-weight: inherit;
+    font-size: 12px;	
+    line-height: 17px;    
+    font-family: "Noto Sans";
+    border-radius: inherit;
+    border: inherit;
+    outline: inherit;
+    box-shadow: inherit;
+    padding: inherit;
+    vertical-align: inherit;
+        &:hover{
+            @extend a
+        }
+}
+
+%btn-radio{
+    box-sizing: border-box;	
+    height: 36px;	
+    width: 214px;	
+    border: 1px solid #E5E1F9;	
+    border-radius: $radius;	
+    background-color: #FFFFFF;
+    text-align: center;
+    padding-left: 8.5px;
+    margin: 4px;
+    margin-top:0 ;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+}
+
+%prix-ancien{
+    text-decoration: line-through;
+    margin: 4PX;
+    color: #9B9B9B;	font-family: "Noto Sans";	
+    font-size: 14px;	
+    line-height: 19px;
+}
+
+%prix-recent{
+    color: #000000;	
+    font-family: "Open Sans";	
+    font-size: 16px;	
+    font-weight: 600;	
+    line-height: 22px;	
+    text-align: right;
+}
+
+%btn-rose{
+    margin-top: 45px;
+    height: 48px;	
+    width: 317px;
+    color: #FFFFFF;	
+    font-family: Montserrat;	
+    font-size: 14px;	
+    font-weight: 600;
+    background: #ff0075;
+}

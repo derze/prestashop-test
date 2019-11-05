@@ -1,0 +1,119 @@
+@import "../styles/global.scss";
+
+// Your cart
+h1{
+    margin-top: 38px;
+    margin-bottom: 16px;
+    line-height: 24px;
+ 
+ }
+
+ .card-order{
+     position: absolute;
+    height: 337px;	
+    width: 365px;	
+    border: 1px solid #F3F3F3;	
+    border-radius: 3px;	
+    background-color: #FFFFFF;
+    padding: 24px;
+    // Cart total
+    .card-order-top{
+        height: 70px;
+        border-bottom: .5px dashed $grey-medium;
+        color: black;
+            .order-price{
+                display: flex;
+                justify-content: space-between;
+                span{
+                    height: 21px;	
+                    width: 83px;	
+                    color: #4A4A4A;	
+                    font-family: "Noto Sans";	
+                    font-size: 14px;	
+                    line-height: 21px;
+                    margin-left: 8px;
+                }
+                .price-ancient{
+                    @extend %prix-ancien
+                }
+                .price-recent{
+                    @extend %prix-recent
+                }
+            }
+        }
+    // Use a promotion code
+    .card-order-middle-top{
+        position: relative;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-bottom: .5px dashed $grey-medium ;
+        height: 50px;
+            a{
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                border: none;
+                text-decoration: underline;
+                color: #4A4A4A;	
+                font-family: "Noto Sans";	
+                font-size: 14px;	
+                line-height: 19px;	
+                text-align: center;
+            }
+    }
+    // total exclant taxe
+    .card-order-middle-bottom{
+        @extend .card-order-middle-top;
+        justify-content: space-between;
+            .total-ex{
+                color: #011638;	
+                font-family: "Noto Sans";	
+                font-size: 15px;	
+                line-height: 20px;
+            }
+            .prix{
+                color: #011638;	
+                font-family: "Noto Sans";	
+                font-size: 15px;	
+                line-height: 20px;
+            }
+    }
+    // total incluant taxe
+    .card-order-bottom{
+        .order-tax-price{
+            display: flex;
+            justify-content: space-between;
+            .order-total, .order-price{
+                font-weight: 700;
+                font-size: 20px;	
+                line-height: 27px;
+            }
+        }
+        .btn{
+           @extend %btn-rose;
+        }
+    }
+}
+
+.payment{
+    text-align: center;
+    margin-top: 350px;
+    position: absolute;
+
+    .secure-text{
+        height: 20px;	
+        width: 122px;	
+        color: #7A7A7A;	
+        font-family: Montserrat;	
+        font-size: 11px;	
+        line-height: 20px;
+            img{
+                height: 14px;
+                width: auto;
+                margin-right: 3px;
+                margin-bottom:7px;
+            }
+    }
+}

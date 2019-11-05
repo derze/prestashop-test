@@ -1,0 +1,246 @@
+@import "../styles/global.scss";
+
+// Your cart
+h1{
+   @extend %h1;
+   margin-top: 38px;
+   margin-bottom: 16px;
+   line-height: 24px;
+
+}
+// TOUT
+.card-cart{
+    position: relative;
+    box-sizing: border-box;	
+    height: 247px;	
+    width: 731px;	
+    border: 1px solid #ECE9E9;	
+    border-radius: $radius;	
+    background-color: #FFFFFF;
+    // Module
+        .card-cart-header{
+            background: transparent;
+            border: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            // images
+                .img-place{
+                    height: 50px;	
+                    width: 50px;	
+                    border-radius: $radius;	
+                    background-color: #0B82FF;
+                    margin: 24px;
+                    margin-left: 17px;
+
+                }
+                // descriptif module
+                .description{
+                    margin-top: 24px;
+                    padding: 0;
+                    width: 378px;
+                    height: 22px;
+                    line-height: 22px;
+                        span{
+                            @extend %h1;
+                            margin: 0;
+                            font-size: 16px;
+                        }
+                        p{
+                            color: #4A4A4A;	
+                            font-family: "Noto Sans";	
+                            font-size: 14px;	
+                            line-height: 21px;
+                        }
+                }
+                // -30%
+                .solde{
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 30px;	
+                    width: 45px;	
+                    border-radius: 0 2px 0 4px;	
+                    background-color: rgba(244,67,54,0.2);
+                    text-align: center;
+                    color: #F44336;
+                    font-family: "Open Sans";
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                // compteur button et prix
+                .choix{
+                    position: absolute;
+                    top: 90px;
+                    left: 17px;
+                    padding: 0;
+                    .select{
+                        border-radius: $radius;
+                        border: 1px solid $grey-medium;
+                        height: 30px;	
+                        width: 50px;
+                        margin: 0;
+                        text-align: center;
+                        line-height: 30px;
+                    }
+                    .supprimer{
+                        text-decoration: underline;
+                        margin-left: 17px;;
+                    }
+                    input[type=number]::-webkit-inner-spin-button {
+                        opacity: 1;
+                        height: 122px;
+                      }
+                      .prices{
+                        position: absolute;
+                        top: 4px;
+                        left: 610px;
+                        height: 0;	
+                        width: 77px;
+                            .price-ancient{
+                               @extend %prix-ancien	
+                                
+                            }   
+                            .price-recent{
+                                @extend %prix-recent
+                            }
+                      }
+                }
+                
+        }
+
+        .card-footer{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 114px;	
+            width: 100%;	
+            border-radius: $radius;
+            background-color: $grey-clear;
+            border-top-right-radius: 0;
+            border-top-left-radius: 0;
+                
+                .footer-haut{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 60.5px;
+                    border-bottom: 1px solid #ECE9E9;
+                    padding: 0;
+                    
+                    .support{
+                        display: flex;
+                        align-items: center;
+                        height: fit-content;	
+                        color: #000000;	
+                        font-family: "Open Sans";	
+                        font-size: 14px;	
+                        margin-left: 17px;
+                        margin-top: 5px;
+                            img{
+                                height: 13px;
+                                 width: auto;
+                            }
+                            .radio{
+                                @extend %btn-radio;
+                                width: fit-content;
+                                    input[type="radio"]{
+                                        margin: 5px;
+                                    }
+                                    // recommander
+                                    B{
+                                        color: #000000;	
+                                        font-family: "Open Sans";	
+                                        font-size: 14px;	
+                                        font-weight: 600;	
+                                        line-height: 20px;	
+                                        text-align: right;
+                                        margin-left: 8px;
+                                        margin-right: 17px;
+                                    }
+                                    
+                                    span{
+                                        height: 16px;	
+                                        width: 83px;	
+                                        border-radius: $radius;	
+                                        background-color: #9B8AF0;
+                                        color: #FFFFFF;	
+                                        font-family: Montserrat;	
+                                        font-size: 9px;	
+                                        font-weight: 600;	
+                                        letter-spacing: 0.07px;	
+                                        line-height: 16px;	
+                                        text-align: center;
+                                        margin-left: 8px;
+                                        margin-right: 17px;
+                                    }
+                            }
+                           
+                            
+                    }
+                        
+                }
+
+
+
+        }
+}
+
+.footer-bas{
+    position: absolute;
+    bottom: 0;
+    height: 53.5px;
+    display: flex;
+    align-items: center;
+    color: #000000;	
+    font-family: "Open Sans";
+    font-size: 14px;	
+    line-height: 26.75px;
+
+        input[type="checkbox"] + label{
+            display: block;
+            margin: .2em;
+
+        }
+        input[type="checkbox"]{
+            display:  none;
+        }
+        input[type="checkbox"] + label:before{
+            content: "\2714";
+            text-align: center;
+            line-height: 1em;
+            border: 0.1em solid #000;
+            border-radius: .2em;
+            display: inline-block;
+            height: 14px;	
+            width: 14px;
+            padding-left: .04em;
+            margin-right: 0.4em;
+            vertical-align: bottom;
+            color: transparent;
+            margin-bottom: 7px;
+
+        }
+        input[type="checkbox"]:checked + label:before{
+            background-color: #34219E;
+            color: #fff;
+        }
+        .module{
+            height: 21px;	
+            width: 505px;
+            margin-left: 15px;
+            display: flex;
+            justify-content: space-between;
+
+                span{
+                    height: 20px;	
+                    width: 276px;	
+                    color: #7A7A7A;	
+                    font-family: "Noto Sans";	
+                    font-size: 12px;	
+                    line-height: 20px;
+                }
+                
+}}
+

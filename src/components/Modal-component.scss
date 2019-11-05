@@ -1,0 +1,153 @@
+@import "../styles/global.scss";
+.closeModal{
+    height: 70px;	
+    width: 70px;	
+    background-color: #FFFFFF;    
+    border-radius: 50%;
+    position: absolute;
+    right: -130px;
+    top: -75px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        img{
+            height: 50px;
+            cursor: pointer;
+
+        }
+}
+.modal-container{
+    height: 448px;	
+    width: 1150px;
+    background: #ffffff;
+    border-radius: $radius;
+    padding-top: 34px;
+    margin-right: -50px;
+    display: flex;
+    box-shadow: 10px 10px 60px 29px rgba(210,210,210,1);
+    transition: 1s;
+    animation: trans 1s ease-in-out;
+        .slider{
+            height: 350px;	
+            width: 463px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .prev,.next{
+                cursor: pointer;
+            }
+                .img{
+                    height: 350px;	
+                    width: 350px;	
+                    background-color: #D8D8D8;
+                    
+                }
+        }
+        .modal-details{
+            height: 266px;	
+            width: 589px;
+            margin-left: 14px;
+        
+                .img{
+                    margin-right: 14px;
+                    border-radius: $radius;
+                }
+
+                .title{
+                    display: flex;
+                    color: #011638;	
+                    font-family: "Open Sans";	
+                    font-size: 16px;	
+                    font-weight: bold;	
+                    line-height: 22px;
+
+                        p{
+                            color: #011638;	
+                            font-family: "Noto Sans";	
+                            font-size: 12px;	
+                            line-height: 17px;
+                            font-weight: lighter;
+                        }
+                }
+                .notation-avis{
+                    display: flex;
+                    width: 156px;
+                    justify-content: space-between;
+                        .avis{
+                            color: #011638;	
+                            font-family: "Noto Sans";	
+                            font-size: 14px;	
+                            line-height: 19px;
+                            margin-top: 6px;
+                        }
+                }
+                .etoiles{
+                    margin-top:5px;
+                    height: 18px;	
+                    width: 90px;
+                    display: flex;
+                        img{
+                            height: 18px;	
+                            width: auto;
+                        }
+                }
+                .badge{
+                    display: flex;
+                    margin-top: 10px;
+                    align-items: center;
+                    padding: 0;
+                    .navigation,.conversion{
+                        @extend %btn-radio;
+                        margin:0 ;
+                        height: 32px;	
+                        width: 129px;
+                        background: #E5E1F9;
+                        color: #011638;	
+                        font-family: "Open Sans";	
+                        font-size: 16px;	
+                        line-height: 22px;
+                        font-weight: normal;
+                        margin-right: 15px;
+                    }
+                }
+                .text-article{
+                    margin-top: 16px;
+                    height: 90px;	
+                    width: 589px;	
+                    color: #4A4A4A;	
+                    font-family: "Open Sans";	
+                    font-size: 13px;	
+                    line-height: 18px;
+                    text-align: left;
+                }
+                .demo{
+                    color: #34219E;	
+                    font-family: "Open Sans";	
+                    font-size: 16px;	
+                    font-weight: bold;	
+                    line-height: 22px;
+                    font-weight: bold;	
+                    line-height: 22px;
+                    margin-top: 24px;
+                }
+
+                .ajouter{
+                    @extend %btn-rose;
+                    border: none;
+                    border-radius: $radius;
+                }
+        }
+}
+
+
+@keyframes trans{
+    0%{
+        transform: translateY(-75px);
+        filter: blur(1px);
+    }
+    50%{
+        filter: blur(0);
+    }
+
+}
